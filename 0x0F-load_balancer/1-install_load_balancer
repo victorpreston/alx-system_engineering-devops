@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Setup up HAproxy load balancer
+# Install HAproxy.
+sudo apt update
+sudo apt install -y haproxy
+
+# Enable HAProxy to be started by the init script.
+sudo sed -i '$aENABLED=1' /etc/default/haproxy
+
+# Setup load balancing frontend and backend options
+sudo sed -i '$a\\nfrontend http_front\n\tbind *:80\n\tstats uri /haproxy?stats\n\tdefault_backend http_back\n\nbackend http_back\n\tbalance roundrobin\n\tserver 20738-web-01 44.200.30.52:80 check\n\tserver 20738-web-02 3.235.172.223:80 check' /etc/haproxy/haproxy.cfg
+
+# Restart HAproxy
+sudo service haproxy restart
