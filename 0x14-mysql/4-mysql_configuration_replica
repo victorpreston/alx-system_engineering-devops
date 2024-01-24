@@ -1,0 +1,8 @@
+[mysqld]
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+datadir         = /var/lib/mysql
+log-error       = /var/log/mysql/error.log
+symbolic-links=0
+server-id = 2
+log_bin = /var/log/mysql/mysql-bin.log
