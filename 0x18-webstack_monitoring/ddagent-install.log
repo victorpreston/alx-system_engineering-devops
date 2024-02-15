@@ -1,0 +1,101 @@
+[34m
+* Datadog Agent 7 install script v1.26.0
+[0m
+[34m
+* Installing apt-transport-https, curl and gnupg
+[0m
+Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Ign:3 https://apt.datadoghq.com stable InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:6 http://ppa.launchpad.net/brightbox/ruby-ng/ubuntu focal InRelease
+Hit:7 https://apt.datadoghq.com stable Release
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.68.0-1ubuntu2.21).
+gnupg is already the newest version (2.2.19-3ubuntu2.2).
+apt-transport-https is already the newest version (2.0.10).
+0 upgraded, 0 newly installed, 0 to remove and 247 not upgraded.
+[34m
+* Installing APT package sources for Datadog
+[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  6226  100  6226    0     0  31765      0 --:--:-- --:--:-- --:--:-- 57648
+gpg: key 32637D44F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1713  100  1713    0     0  17130      0 --:--:-- --:--:-- --:--:--  152k
+gpg: key E6266D4AC0962C7D: "Datadog, Inc. APT key (2023-04-20) (APT key) <package+aptkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  6226  100  6226    0     0  61039      0 --:--:-- --:--:-- --:--:-- 61039
+gpg: key 32637D44F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  9001  100  9001    0     0  89118      0 --:--:-- --:--:-- --:--:-- 89118
+gpg: key D3A80E30382E94DE: "Datadog, Inc <package@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+Ign:1 https://apt.datadoghq.com stable InRelease
+Hit:2 https://apt.datadoghq.com stable Release
+Reading package lists...
+  [33mInstalling package(s): datadog-agent datadog-signing-keys datadog-apm-inject datadog-apm-library-java datadog-apm-library-js datadog-apm-library-python datadog-apm-library-dotnet datadog-apm-library-ruby
+[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+datadog-signing-keys is already the newest version (1:1.3.1-1).
+datadog-apm-library-js is already the newest version (4.19.0-1).
+datadog-apm-inject is already the newest version (0.12.3-1).
+datadog-apm-library-ruby is already the newest version (1.20.0-1).
+datadog-apm-library-java is already the newest version (1.29.0-1).
+datadog-apm-library-python is already the newest version (2.6.1-1).
+datadog-apm-library-dotnet is already the newest version (2.47.0-1).
+The following NEW packages will be installed:
+  datadog-agent
+0 upgraded, 1 newly installed, 0 to remove and 247 not upgraded.
+Need to get 404 MB of archives.
+After this operation, 1,321 MB of additional disk space will be used.
+Get:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.50.3-1 [404 MB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 404 MB in 37s (10.8 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 102072 files and directories currently installed.)
+Preparing to unpack .../datadog-agent_1%3a7.50.3-1_amd64.deb ...
+Unpacking datadog-agent (1:7.50.3-1) ...
+dpkg: error processing archive /var/cache/apt/archives/datadog-agent_1%3a7.50.3-1_amd64.deb (--unpack):
+ error creating directory './opt/datadog-agent/embedded/lib/python3.9/site-packages/lz4/frame/__pycache__': Disk quota exceeded
+dpkg-deb: error: paste subprocess was killed by signal (Broken pipe)
+Errors were encountered while processing:
+ /var/cache/apt/archives/datadog-agent_1%3a7.50.3-1_amd64.deb
+W: --force-yes is deprecated, use one of the options starting with --allow instead.
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+[31mERROR
+Failed to install one or more packages, sometimes it may be
+due to another APT source failing. See the logs above to
+determine the cause.
+If the cause is unclear, please contact Datadog support.
+*****
+
+It looks like you hit an issue when trying to install the Datadog Agent.
+
+    
+
+Troubleshooting and basic usage information for the Datadog Agent are available at:
+
+    https://docs.datadoghq.com/agent/basic_agent_usage/
+[0m
+Do you want to send a failure report to Datadog (including ddagent-install.log)? (y/[n]) Enter an email address so we can follow up: OKA notification has been sent to Datadog with the contents of ddagent-install.log
+
+If you are still having problems, please send an email to support@datadoghq.com
+with the contents of ddagent-install.log and any information you think would be
+useful and we will do our very best to help you solve your problem.
