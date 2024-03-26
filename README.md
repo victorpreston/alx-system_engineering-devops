@@ -6,7 +6,7 @@
 
 ## About
 
-- This repository consists of all the .Subject projects done with [ALX Africa](https://www.alxafrica.com/) Software Engineering course in partnership with [Holberton School](https://www.holbertonschool.com/) by [Victor Preston](https://th3-gr00t.tk/).
+- This repository consists of all the . Subject projects done with [ALX Africa](https://www.alxafrica.com/) Software Engineering course in partnership with [Holberton School](https://www.holbertonschool.com/) by [Victor Preston](https://github.com/victorpreston).
 
 ---
 
