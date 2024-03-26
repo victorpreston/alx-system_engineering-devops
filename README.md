@@ -32,4 +32,11 @@
 - [0x13](./0x13-firewall) : Firewall.
 - [0x14](./0x14-mysql) : MySQL.
 - [0x15](./0x15-api) : API.
+- [0x16](./0x16-api_advanced) : API Advanced.
+- [0x17](./0x17-web_stack_debugging_3) : Web stack debugging #3.
+- [0x18](./0x18-webstack_monitoring) : Web Stack Monitoring.
+- [0x19](./0x19-postmortem) : Postmortem.
+- [0x1A](./0x1A-application_server) : Application Server.
+- [0x1B](./0x1B-web_stack_debugging_4) : Web stack debugging #4.
 - [Attack is the best defense.](./attack_is_the_best_defense)
+- [Command line for the win](./command_line_for_the_win)
